@@ -60,7 +60,7 @@
         <p class="section-subtitle">Handpicked experiences for the adventurous soul</p>
         <div class="tours-grid">
             <div class="tour-card">
-                <div class="tour-image">🏔️</div>
+                <div class="tour-image"><img src="images/about1.png" alt="Tour image 1" class="gallery-image active"></div>
                 <div class="tour-content">
                     <div class="tour-rating">⭐⭐⭐⭐⭐ (142 reviews)</div>
                     <h3 class="tour-title">Swiss Alps Explorer</h3>
@@ -73,7 +73,7 @@
             </div>
 
             <div class="tour-card">
-                <div class="tour-image">🏖️</div>
+                <div class="tour-image"><img src="images/elephants.png" alt="Tour image 1" class="gallery-image active"></div>
                 <div class="tour-content">
                     <div class="tour-rating">⭐⭐⭐⭐⭐ (98 reviews)</div>
                     <h3 class="tour-title">Bali Paradise Escape</h3>
@@ -86,7 +86,7 @@
             </div>
 
             <div class="tour-card">
-                <div class="tour-image">🦁</div>
+                <div class="tour-image"><img src="images/mida.png" alt="Tour image 1" class="gallery-image active"></div>
                 <div class="tour-content">
                     <div class="tour-rating">⭐⭐⭐⭐⭐ (215 reviews)</div>
                     <h3 class="tour-title">African Safari Adventure</h3>
@@ -99,7 +99,7 @@
             </div>
 
             <div class="tour-card">
-                <div class="tour-image">🗼</div>
+                <div class="tour-image"><img src="images/mombasa-tasks.png" alt="Tour image 1" class="gallery-image active"></div>
                 <div class="tour-content">
                     <div class="tour-rating">⭐⭐⭐⭐⭐ (187 reviews)</div>
                     <h3 class="tour-title">European Capitals Tour</h3>
@@ -112,7 +112,7 @@
             </div>
 
             <div class="tour-card">
-                <div class="tour-image">🏯</div>
+                <div class="tour-image"><img src="images/mrnpk.png" alt="Tour image 1" class="gallery-image active"></div>
                 <div class="tour-content">
                     <div class="tour-rating">⭐⭐⭐⭐⭐ (156 reviews)</div>
                     <h3 class="tour-title">Japan Cultural Experience</h3>
@@ -125,7 +125,7 @@
             </div>
 
             <div class="tour-card">
-                <div class="tour-image">🏜️</div>
+                <div class="tour-image"><img src="images/tew.png" alt="Tour image 1" class="gallery-image active"></div>
                 <div class="tour-content">
                     <div class="tour-rating">⭐⭐⭐⭐⭐ (92 reviews)</div>
                     <h3 class="tour-title">Morocco Desert Adventure</h3>
@@ -287,6 +287,34 @@
             <p>&copy; 2025 Gradiel Adventures Tours. All rights reserved. | Designed with ❤️ for travelers</p>
         </div>
     </footer>
+    <script>
+        // Typing Effect for Hero
+        const heroTitle = document.querySelector('.hero h1');
+        const text = heroTitle.textContent;
+        heroTitle.textContent = '';
+
+        let i = 0;
+        function typeWriter() {
+            if (i < text.length) {
+                heroTitle.textContent += text.charAt(i);
+                i++;
+                setTimeout(typeWriter, 100);
+            }
+        }
+
+        setTimeout(typeWriter, 1000);
+
+        // Parallax Effect for Hero
+        window.addEventListener('scroll', function() {
+            const scrolled = window.pageYOffset;
+            const hero = document.querySelector('.hero');
+            const heroContent = document.querySelector('.hero-content');
+            
+            if (hero && heroContent) {
+                heroContent.style.transform = `translateY(${scrolled * 0.5}px)`;
+            }
+        });
+    </script>
     <script src="menu.js"></script>
 </body>
 </html>
