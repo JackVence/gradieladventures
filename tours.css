@@ -12,7 +12,6 @@ body {
 }
 
 /* Navigation */
-/* Navigation */
 nav {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     padding: 1rem 5%;
@@ -256,7 +255,7 @@ nav {
 /* Tour Cards Grid View */
 .tours-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 2rem;
 }
 
@@ -506,6 +505,51 @@ nav {
     cursor: not-allowed;
 }
 
+/* Footer */
+footer {
+    background: #2c3e50;
+    color: white;
+    padding: 3rem 5%;
+}
+
+.footer-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.footer-section h3 {
+    margin-bottom: 1rem;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section a {
+    color: #bdc3c7;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section a:hover {
+    color: white;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #34495e;
+    color: #bdc3c7;
+}
+
 /* Responsive */
 @media (max-width: 1024px) {
     .sidebar {
@@ -570,19 +614,10 @@ nav {
         height: 220px;
     }
 
-    .nav-links {
-        display: none;
-        gap: 1rem;
-        font-size: 0.9rem;
-    }
-
     .view-sort-controls {
         flex-wrap: wrap;
     }
-}
 
-/* Mobile Filter Styles */
-@media (max-width: 768px) {
     /* Filter Toggle Button (shows on mobile) */
     .filter-toggle-btn {
         display: block;
@@ -612,9 +647,11 @@ nav {
     /* Sidebar becomes collapsible */
     .sidebar {
         position: fixed;
+        display: none;
         bottom: 0;
         left: 0;
         right: 0;
+        margin-top: 80px;
         max-height: 80vh;
         overflow-y: auto;
         z-index: 998;
@@ -626,6 +663,7 @@ nav {
 
     .sidebar.open {
         transform: translateY(0);
+        display: initial;
     }
 
     /* Overlay background when filters are open */
@@ -680,8 +718,8 @@ nav {
 }
 
 /* Alternative: Horizontal Scrolling Filters */
-@media (max-width: 768px) {
-    /* If you prefer horizontal scrolling filters */
+/*@media (max-width: 768px) {
+    /* If you prefer horizontal scrolling filters 
     .sidebar.horizontal-scroll {
         position: static;
         transform: none;
@@ -701,4 +739,4 @@ nav {
         min-width: 200px;
         margin-bottom: 0;
     }
-}
+}*/

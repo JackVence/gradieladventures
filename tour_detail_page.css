@@ -317,12 +317,12 @@ nav {
     border-radius: 20px;
     font-size: 0.9rem;
     font-weight: 600;
-    margin-bottom: 1rem;
+    margin-bottom: 0.6rem;
 }
 
 .tour-title {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
     color: #333;
 }
 
@@ -365,7 +365,7 @@ nav {
     padding: 2rem;
     background: #f8f9fa;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     gap: 1.5rem;
 }
 
@@ -400,7 +400,7 @@ nav {
 }
 
 .content-section h2 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     margin-bottom: 1rem;
     color: #333;
     display: flex;
@@ -417,7 +417,7 @@ nav {
 /* Itinerary */
 .itinerary-item {
     margin-bottom: 2rem;
-    padding-left: 3rem;
+    padding-left: 2.5rem;
     position: relative;
 }
 

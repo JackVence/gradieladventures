@@ -10,18 +10,18 @@
     <!-- Navigation -->
     <nav>
         <div class="nav-container">
-            <a href="#" class="logo">🌍 Gradiel Adventures</a>
+            <a href="index.html" class="logo">🌍 Gradiel Adventures</a>
             <div class="menu-toggle" onclick="toggleMenu()">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
             <ul class="nav-links" id="navLinks">
-                <li><a href="index.html" onclick="closeMenu()">Home</a></li>
+                <li class="active"><a href="#home" onclick="closeMenu()">Home</a></li>
                 <li><a href="tours.html" onclick="closeMenu()">Tours</a></li>
                 <li><a href="#events" onclick="closeMenu()">Events</a></li>
                 <li><a href="#destinations" onclick="closeMenu()">Destinations</a></li>
-                <li><a href="#about" onclick="closeMenu()">About</a></li>
+                <li><a href="about.html" onclick="closeMenu()">About</a></li>
                 <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
                 <li><a href="account.html" onclick="closeMenu()">Account</a></li>
             </ul>
@@ -197,7 +197,7 @@
                         <button class="view-btn active" onclick="toggleView('grid')">⊞ Grid</button>
                         <button class="view-btn" onclick="toggleView('list')">☰ List</button>
                     </div>
-                    <select class="sort-select">
+                    <select class="sort-select" id="sort-select">
                         <option>Sort by: Featured</option>
                         <option>Price: Low to High</option>
                         <option>Price: High to Low</option>
@@ -574,6 +574,48 @@
             </div>
         </div>
     </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>About Gradiel Adventures</h3>
+                <p>We're passionate about creating unforgettable travel experiences that connect people with the world's most amazing destinations.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#tours">Browse Tours</a></li>
+                    <li><a href="#events">Upcoming Events</a></li>
+                    <li><a href="#destinations">Destinations</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Booking Guide</a></li>
+                    <li><a href="#">Cancellation Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li>📧 info@Gradiel Adventures.com</li>
+                    <li>📞 +1 (555) 123-4567</li>
+                    <li>📍 123 Travel Street, NY 10001</li>
+                    <li>🕒 Mon-Fri: 9AM - 6PM</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Gradiel Adventures Tours. All rights reserved. | Designed with ❤️ for travelers</p>
+        </div>
+    </footer>
 
     <script>
         // Toggle between grid and list view
