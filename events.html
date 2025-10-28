@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gradiel Adventures | Events</title>
+    <link rel="stylesheet" href="tours.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">🌍 Gradiel Adventures</a>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li class="active"><a href="index.html" onclick="closeMenu()">Home</a></li>
+                <li><a href="tours.html" onclick="closeMenu()">Tours</a></li>
+                <li><a href="events.html" onclick="closeMenu()">Events</a></li>
+                <li><a href="#destinations" onclick="closeMenu()">Destinations</a></li>
+                <li><a href="about.html" onclick="closeMenu()">About</a></li>
+                <li><a href="contact.html" onclick="closeMenu()">Contact</a></li>
+                <li><a href="account.html" onclick="closeMenu()">Account</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="calendar">
+        <h2>📅 Upcoming Events Calendar</h2>
+        <p>[Calendar integration placeholder]</p>
+    </section>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Sidebar Filters -->
+        <!-- Add this right before the sidebar -->
+        <button class="filter-toggle-btn" onclick="toggleFilters()">
+            <span>🔍 Filters & Sort</span>
+            <span class="icon">▼</span>
+        </button>
+
+        <!-- Add overlay div before closing body tag -->
+        <div class="filter-overlay" id="filterOverlay" onclick="toggleFilters()"></div>
+
+        <!-- Update your sidebar to include filter actions wrapper -->
+        <aside class="sidebar" id="filterSidebar">
+            <div class="filter-section">
+                <h3>🔍 Filter Tours</h3>
+            </div>
+
+            <div class="filter-section">
+                <h3>🎯 Event Type</h3>
+                <div class="filter-group">
+                    <label>
+                        <input type="checkbox" name="type" value="adventure">
+                        <span>Camping</span>
+                    </label>
+                </div>
+                <div class="filter-group">
+                    <label>
+                        <input type="checkbox" name="type" value="cultural">
+                        <span>Hike</span>
+                    </label>
+                </div>
+                <div class="filter-group">
+                    <label>
+                        <input type="checkbox" name="type" value="beach">
+                        <span>Beach & Relaxation</span>
+                    </label>
+                </div>
+                <div class="filter-group">
+                    <label>
+                        <input type="checkbox" name="type" value="wildlife">
+                        <span>Safari</span>
+                    </label>
+                </div>
+                <div class="filter-group">
+                    <label>
+                        <input type="checkbox" name="type" value="city">
+                        <span>City Tours</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="filter-section">
+                <h3>📅 Date</h3>
+                <div class="filter-group">
+                    <label>
+                        <input type="checkbox" name="duration" value="1-3">
+                        <span>Today</span>
+                    </label>
+                </div>
+                <div class="filter-group">
+                    <label>
+                        <input type="checkbox" name="duration" value="4-7">
+                        <span>This Week</span>
+                    </label>
+                </div>
+                <div class="filter-group">
+                    <label>
+                        <input type="checkbox" name="duration" value="8-14">
+                        <span>This Month</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Wrap the buttons in a container for mobile -->
+            <div class="filter-actions">
+                <button class="filter-button" onclick="applyFilters()">Apply Filters</button>
+                <button class="clear-filters" onclick="clearFilters()">Clear All</button>
+            </div>
+        </aside>
+
+        <!-- Tours Content -->
+        <div class="tours-content">
+           <!--- <div class="tours-header">
+                <div class="results-info">
+                    Showing <strong>1-12</strong> of <strong>89 tours</strong>
+                </div>
+                <div class="view-sort-controls">
+                    <div class="view-toggle">
+                        <button class="view-btn active" onclick="toggleView('grid')">⊞ Grid</button>
+                        <button class="view-btn" onclick="toggleView('list')">☰ List</button>
+                    </div>
+                    <select class="sort-select" id="sort-select">
+                        <option>Sort by: Featured</option>
+                        <option>Price: Low to High</option>
+                        <option>Price: High to Low</option>
+                        <option>Rating: High to Low</option>
+                        <option>Duration: Short to Long</option>
+                        <option>Most Popular</option>
+                    </select>
+                </div>
+            </div>-->
+
+            <div class="tours-grid" id="toursContainer">
+                <section class="event-card">
+                    <h3>Sunset Hike at Ngong Hills</h3>
+                    <p class="event-details">📅 Date: Nov 3, 2025 | 🕒 Time: 4:00 PM | 📍 Location: Ngong Hills</p>
+                    <p class="event-description">Join us for a scenic sunset hike with panoramic views and great company. Perfect for beginners and seasoned hikers alike.</p>
+                    <p><strong>🎟️ Ticket Price:</strong> KSh 1,500</p>
+                    <button class="book-btn">Register Now</button>
+                </section>
+
+                <!-- Tour Card 2 -->
+                <section class="event-card">
+                    <h3>Sunset Hike at Ngong Hills</h3>
+                    <p class="event-details">📅 Date: Nov 3, 2025 | 🕒 Time: 4:00 PM | 📍 Location: Ngong Hills</p>
+                    <p class="event-description">Join us for a scenic sunset hike with panoramic views and great company. Perfect for beginners and seasoned hikers alike.</p>
+                    <p><strong>🎟️ Ticket Price:</strong> KSh 1,500</p>
+                    <button class="book-btn">Register Now</button>
+                </section>
+
+                <!-- Tour Card 3 -->
+                <section class="event-card">
+                    <h3>Sunset Hike at Ngong Hills</h3>
+                    <p class="event-details">📅 Date: Nov 3, 2025 | 🕒 Time: 4:00 PM | 📍 Location: Ngong Hills</p>
+                    <p class="event-description">Join us for a scenic sunset hike with panoramic views and great company. Perfect for beginners and seasoned hikers alike.</p>
+                    <p><strong>🎟️ Ticket Price:</strong> KSh 1,500</p>
+                    <button class="book-btn">Register Now</button>
+                </section>
+
+                <!-- Tour Card 4 -->
+                <section class="event-card">
+                    <h3>Sunset Hike at Ngong Hills</h3>
+                    <p class="event-details">📅 Date: Nov 3, 2025 | 🕒 Time: 4:00 PM | 📍 Location: Ngong Hills</p>
+                    <p class="event-description">Join us for a scenic sunset hike with panoramic views and great company. Perfect for beginners and seasoned hikers alike.</p>
+                    <p><strong>🎟️ Ticket Price:</strong> KSh 1,500</p>
+                    <button class="book-btn">Register Now</button>
+                </section>
+
+                <!-- Tour Card 5 -->
+                <section class="event-card">
+                    <h3>Sunset Hike at Ngong Hills</h3>
+                    <p class="event-details">📅 Date: Nov 3, 2025 | 🕒 Time: 4:00 PM | 📍 Location: Ngong Hills</p>
+                    <p class="event-description">Join us for a scenic sunset hike with panoramic views and great company. Perfect for beginners and seasoned hikers alike.</p>
+                    <p><strong>🎟️ Ticket Price:</strong> KSh 1,500</p>
+                    <button class="book-btn">Register Now</button>
+                </section>
+
+                <!-- Tour Card 6 -->
+                <section class="event-card">
+                    <h3>Sunset Hike at Ngong Hills</h3>
+                    <p class="event-details">📅 Date: Nov 3, 2025 | 🕒 Time: 4:00 PM | 📍 Location: Ngong Hills</p>
+                    <p class="event-description">Join us for a scenic sunset hike with panoramic views and great company. Perfect for beginners and seasoned hikers alike.</p>
+                    <p><strong>🎟️ Ticket Price:</strong> KSh 1,500</p>
+                    <button class="book-btn">Register Now</button>
+                </section>
+
+                <!-- Tour Card 7 -->
+                <section class="event-card">
+                    <h3>Weekend Camping at Lake Elementaita</h3>
+                    <p class="event-details">📅 Date: Nov 9–10, 2025 | 🕒 Time: 10:00 AM | 📍 Location: Lake Elementaita</p>
+                    <p class="event-description">Experience the wild under the stars with guided camping, bonfire stories, and birdwatching tours.</p>
+                    <p><strong>🎟️ Ticket Price:</strong> KSh 3,000</p>
+                    <button class="book-btn">Book Your Spot</button>
+                </section>
+
+                <!-- Tour Card 9 -->
+                <section class="event-card">
+                    <h3>Sunset Hike at Ngong Hills</h3>
+                    <p class="event-details">📅 Date: Nov 3, 2025 | 🕒 Time: 4:00 PM | 📍 Location: Ngong Hills</p>
+                    <p class="event-description">Join us for a scenic sunset hike with panoramic views and great company. Perfect for beginners and seasoned hikers alike.</p>
+                    <p><strong>🎟️ Ticket Price:</strong> KSh 1,500</p>
+                    <button class="book-btn">Register Now</button>
+                </section>
+
+                <!-- Tour Card 10 -->
+                <section class="event-card">
+                    <h3>Sunset Hike at Ngong Hills</h3>
+                    <p class="event-details">📅 Date: Nov 3, 2025 | 🕒 Time: 4:00 PM | 📍 Location: Ngong Hills</p>
+                    <p class="event-description">Join us for a scenic sunset hike with panoramic views and great company. Perfect for beginners and seasoned hikers alike.</p>
+                    <p><strong>🎟️ Ticket Price:</strong> KSh 1,500</p>
+                    <button class="book-btn">Register Now</button>
+                </section>
+
+                <!-- Tour Card 11 -->
+                <section class="event-card">
+                    <h3>Sunset Hike at Ngong Hills</h3>
+                    <p class="event-details">📅 Date: Nov 3, 2025 | 🕒 Time: 4:00 PM | 📍 Location: Ngong Hills</p>
+                    <p class="event-description">Join us for a scenic sunset hike with panoramic views and great company. Perfect for beginners and seasoned hikers alike.</p>
+                    <p><strong>🎟️ Ticket Price:</strong> KSh 1,500</p>
+                    <button class="book-btn">Register Now</button>
+                </section>
+
+                <!-- Tour Card 12 -->
+                <section class="event-card">
+                    <h3>Sunset Hike at Ngong Hills</h3>
+                    <p class="event-details">📅 Date: Nov 3, 2025 | 🕒 Time: 4:00 PM | 📍 Location: Ngong Hills</p>
+                    <p class="event-description">Join us for a scenic sunset hike with panoramic views and great company. Perfect for beginners and seasoned hikers alike.</p>
+                    <p><strong>🎟️ Ticket Price:</strong> KSh 1,500</p>
+                    <button class="book-btn">Register Now</button>
+                </section>
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination">
+                <button class="page-btn" disabled>← Previous</button>
+                <button class="page-btn active">1</button>
+                <button class="page-btn">2</button>
+                <button class="page-btn">3</button>
+                <button class="page-btn">Next →</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>About Gradiel Adventures</h3>
+                <p>We're passionate about creating unforgettable travel experiences that connect people with the world's most amazing destinations.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#tours">Browse Tours</a></li>
+                    <li><a href="#events">Upcoming Events</a></li>
+                    <li><a href="#destinations">Destinations</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Booking Guide</a></li>
+                    <li><a href="#">Cancellation Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li>📧 info@Gradiel Adventures.com</li>
+                    <li>📞 +1 (555) 123-4567</li>
+                    <li>📍 123 Travel Street, NY 10001</li>
+                    <li>🕒 Mon-Fri: 9AM - 6PM</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Gradiel Adventures Tours. All rights reserved. | Designed with ❤️ for travelers</p>
+        </div>
+    </footer>
+
+    <script>
+        // Toggle between grid and list view
+        function toggleView(view) {
+            const container = document.getElementById('toursContainer');
+            const buttons = document.querySelectorAll('.view-btn');
+            
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            if (view === 'list') {
+                container.className = 'tours-list';
+                const cards = document.querySelectorAll('.event-card');
+                cards.forEach(card => card.classList.add('list-view'));
+            } else {
+                container.className = 'tours-grid';
+                const cards = document.querySelectorAll('.event-card');
+                cards.forEach(card => card.classList.remove('list-view'));
+            }
+        }
+
+        // Clear all filters
+        function clearFilters() {
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            checkboxes.forEach(checkbox => checkbox.checked = false);
+            
+            const priceInputs = document.querySelectorAll('.price-inputs input');
+            priceInputs.forEach(input => input.value = '');
+            
+            alert('All filters cleared!');
+        }
+
+        // Wishlist functionality
+        document.querySelectorAll('.wishlist-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                if (this.textContent === '♡') {
+                    this.textContent = '♥';
+                    this.style.color = '#ff6b6b';
+                } else {
+                    this.textContent = '♡';
+                    this.style.color = 'inherit';
+                }
+            });
+        });
+
+        // Tour card click functionality
+        /*document.querySelectorAll('.tour-card').forEach(card => {
+            card.addEventListener('click', function(e) {
+                if (!e.target.classList.contains('wishlist-btn') && 
+                    !e.target.classList.contains('book-btn')) {
+                    alert('Opening tour details page...');
+                }
+            });
+        });*/
+
+        // View Details button
+        document.querySelectorAll('.book-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                window.location.href = 'tour_detail_page.html';
+            });
+        });
+
+        // Sort functionality
+        document.querySelector('.sort-select').addEventListener('change', function() {
+            alert('Sorting tours by: ' + this.value);
+        });
+
+        // Pagination
+        document.querySelectorAll('.page-btn:not([disabled])').forEach(btn => {
+            btn.addEventListener('click', function() {
+                if (!this.classList.contains('active')) {
+                    document.querySelector('.page-btn.active').classList.remove('active');
+                    if (!isNaN(this.textContent)) {
+                        this.classList.add('active');
+                    }
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+    <script src="menu.js"></script>
+    <script src="tours_filters.js"></script>
+</body>
+</html>

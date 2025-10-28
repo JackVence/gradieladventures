@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us | Gradiel Adventures</title>
+  <link rel="stylesheet" href="tours.css">
+  <style>
+    :root {
+      --primary: #2c3e50;
+      --accent: #e67e22;
+      --bg: #f4f4f4;
+      --white: #fff;
+      --shadow: rgba(0, 0, 0, 0.1);
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem;
+      margin-top: 80px;
+    }
+
+    section {
+      background: var(--white);
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 5px var(--shadow);
+      border-radius: 8px;
+    }
+
+    h2 {
+      margin-top: 0;
+      color: var(--accent);
+    }
+
+    label {
+      display: block;
+      margin: 1rem 0 0.5rem;
+      font-weight: bold;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .submit-btn {
+      background: var(--accent);
+      color: var(--white);
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+      margin-top: 1rem;
+      transition: background 0.3s ease;
+    }
+
+    .submit-btn:hover {
+      background: #d35400;
+    }
+
+    .contact-info p {
+      margin: 0.5rem 0;
+    }
+
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+      border-radius: 8px;
+    }
+
+    .faq-item {
+      margin-bottom: 1rem;
+    }
+
+    .faq-item h4 {
+      margin: 0;
+      color: var(--accent);
+    }
+
+    .faq-item p {
+      margin: 0.5rem 0 0;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">🌍 Gradiel Adventures</a>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li class="active"><a href="index.html" onclick="closeMenu()">Home</a></li>
+                <li><a href="tours.html" onclick="closeMenu()">Tours</a></li>
+                <li><a href="events.html" onclick="closeMenu()">Events</a></li>
+                <li><a href="#destinations" onclick="closeMenu()">Destinations</a></li>
+                <li><a href="about.html" onclick="closeMenu()">About</a></li>
+                <li><a href="contact.html" onclick="closeMenu()">Contact</a></li>
+                <li><a href="account.html" onclick="closeMenu()">Account</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+    <!-- Contact Form -->
+    <section>
+      <h2>Send Us a Message</h2>
+      <form>
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="subject">Subject</label>
+        <input type="text" id="subject" name="subject" />
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <button type="submit" class="submit-btn">Send Message</button>
+      </form>
+    </section>
+
+    <!-- Contact Info -->
+    <section class="contact-info">
+      <h2>📞 Get in Touch</h2>
+      <p><strong>Phone:</strong> +254 712 345678</p>
+      <p><strong>Email:</strong> info@gradieladventures.co.ke</p>
+      <p><strong>Address:</strong> 2nd Floor, Safari Plaza, Nairobi, Kenya</p>
+    </section>
+
+    <!-- Map -->
+    <section>
+      <h2>📍 Find Us</h2>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!..." allowfullscreen></iframe>
+      <p style="margin-top: 0.5rem;">We're located in the heart of Nairobi — come visit us!</p>
+    </section>
+
+    <!-- Business Hours -->
+    <section>
+      <h2>🕒 Business Hours</h2>
+      <p><strong>Monday – Friday:</strong> 9:00 AM – 6:00 PM</p>
+      <p><strong>Saturday:</strong> 10:00 AM – 4:00 PM</p>
+      <p><strong>Sunday & Holidays:</strong> Closed</p>
+    </section>
+
+    <!-- FAQ -->
+    <section>
+      <h2>❓ Frequently Asked Questions</h2>
+      <div class="faq-item">
+        <h4>Do I need hiking experience to join?</h4>
+        <p>No prior experience is needed! We offer beginner-friendly adventures with guides.</p>
+      </div>
+      <div class="faq-item">
+        <h4>How do I book an event?</h4>
+        <p>Visit our Events page and click the "Register Now" button on your preferred event.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Are group discounts available?</h4>
+        <p>Yes! We offer discounts for groups of 5 or more. Contact us for details.</p>
+      </div>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+        <div class="footer-section">
+            <h3>About Gradiel Adventures</h3>
+            <p>We're passionate about creating unforgettable travel experiences that connect people with the world's most amazing destinations.</p>
+        </div>
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#tours">Browse Tours</a></li>
+                <li><a href="#events">Upcoming Events</a></li>
+                <li><a href="#destinations">Destinations</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Support</h3>
+            <ul>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">Booking Guide</a></li>
+                <li><a href="#">Cancellation Policy</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Contact Us</h3>
+            <ul>
+                <li>📧 info@Gradiel Adventures.com</li>
+                <li>📞 +1 (555) 123-4567</li>
+                <li>📍 123 Travel Street, NY 10001</li>
+                <li>🕒 Mon-Fri: 9AM - 6PM</li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 Gradiel Adventures Tours. All rights reserved. | Designed with ❤️ for travelers</p>
+    </div>
+</footer>
+</body>
+</html>
