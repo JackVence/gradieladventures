@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradiel Adventures - Discover Your Next Adventure</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo">🌍 Gradiel Adventures</a>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" onclick="closeMenu()">Home</a></li>
+                <li><a href="tours.html" onclick="closeMenu()">Tours</a></li>
+                <li><a href="#events" onclick="closeMenu()">Events</a></li>
+                <li><a href="#destinations" onclick="closeMenu()">Destinations</a></li>
+                <li><a href="#about" onclick="closeMenu()">About</a></li>
+                <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
+                <li><a href="account.html" onclick="closeMenu()">Account</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Discover Your Next Adventure</h1>
+            <p>Experience unforgettable journeys across the world's most breathtaking destinations</p>
+            <a href="#tours" class="cta-button">Explore Tours</a>
+        </div>
+    </section>
+
+    <!-- Search Bar -->
+    <section class="search-section">
+        <div class="search-container">
+            <input type="text" class="search-input" placeholder="Where do you want to go?">
+            <input type="date" class="search-input" placeholder="Departure Date">
+            <select class="search-input">
+                <option>Tour Type</option>
+                <option>Adventure</option>
+                <option>Cultural</option>
+                <option>Beach</option>
+                <option>Wildlife</option>
+                <option>City Tours</option>
+            </select>
+            <button class="search-button">Search Tours</button>
+        </div>
+    </section>
+
+    <!-- Featured Tours -->
+    <section class="featured-tours" id="tours">
+        <h2 class="section-title">Featured Tours</h2>
+        <p class="section-subtitle">Handpicked experiences for the adventurous soul</p>
+        <div class="tours-grid">
+            <div class="tour-card">
+                <div class="tour-image">🏔️</div>
+                <div class="tour-content">
+                    <div class="tour-rating">⭐⭐⭐⭐⭐ (142 reviews)</div>
+                    <h3 class="tour-title">Swiss Alps Explorer</h3>
+                    <p class="tour-description">Journey through stunning mountain landscapes, charming villages, and pristine alpine lakes.</p>
+                    <div class="tour-meta">
+                        <span class="tour-duration">📅 7 Days</span>
+                        <span class="tour-price">$1,899</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tour-card">
+                <div class="tour-image">🏖️</div>
+                <div class="tour-content">
+                    <div class="tour-rating">⭐⭐⭐⭐⭐ (98 reviews)</div>
+                    <h3 class="tour-title">Bali Paradise Escape</h3>
+                    <p class="tour-description">Relax on pristine beaches, explore ancient temples, and immerse yourself in Balinese culture.</p>
+                    <div class="tour-meta">
+                        <span class="tour-duration">📅 5 Days</span>
+                        <span class="tour-price">$1,299</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tour-card">
+                <div class="tour-image">🦁</div>
+                <div class="tour-content">
+                    <div class="tour-rating">⭐⭐⭐⭐⭐ (215 reviews)</div>
+                    <h3 class="tour-title">African Safari Adventure</h3>
+                    <p class="tour-description">Witness the Big Five in their natural habitat and experience the magic of the African wilderness.</p>
+                    <div class="tour-meta">
+                        <span class="tour-duration">📅 10 Days</span>
+                        <span class="tour-price">$3,499</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tour-card">
+                <div class="tour-image">🗼</div>
+                <div class="tour-content">
+                    <div class="tour-rating">⭐⭐⭐⭐⭐ (187 reviews)</div>
+                    <h3 class="tour-title">European Capitals Tour</h3>
+                    <p class="tour-description">Explore the cultural treasures of Paris, Rome, Berlin, and Amsterdam in one incredible journey.</p>
+                    <div class="tour-meta">
+                        <span class="tour-duration">📅 12 Days</span>
+                        <span class="tour-price">$2,799</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tour-card">
+                <div class="tour-image">🏯</div>
+                <div class="tour-content">
+                    <div class="tour-rating">⭐⭐⭐⭐⭐ (156 reviews)</div>
+                    <h3 class="tour-title">Japan Cultural Experience</h3>
+                    <p class="tour-description">Discover ancient traditions, modern marvels, and culinary delights in the Land of the Rising Sun.</p>
+                    <div class="tour-meta">
+                        <span class="tour-duration">📅 8 Days</span>
+                        <span class="tour-price">$2,399</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tour-card">
+                <div class="tour-image">🏜️</div>
+                <div class="tour-content">
+                    <div class="tour-rating">⭐⭐⭐⭐⭐ (92 reviews)</div>
+                    <h3 class="tour-title">Morocco Desert Adventure</h3>
+                    <p class="tour-description">Experience the enchanting souks, desert dunes, and vibrant culture of Morocco.</p>
+                    <div class="tour-meta">
+                        <span class="tour-duration">📅 6 Days</span>
+                        <span class="tour-price">$1,599</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section class="events-section" id="events">
+        <h2 class="section-title">Upcoming Events</h2>
+        <p class="section-subtitle">Join us for exclusive travel experiences and community gatherings</p>
+        <div class="events-container">
+            <div class="events-grid">
+                <div class="event-card">
+                    <div class="event-date">NOV 15, 2025</div>
+                    <h3 class="event-title">Travel Photography Workshop</h3>
+                    <p class="event-location">📍 New York City</p>
+                    <p>Learn professional photography techniques to capture your adventures like never before.</p>
+                </div>
+
+                <div class="event-card">
+                    <div class="event-date">DEC 03, 2025</div>
+                    <h3 class="event-title">Adventure Travel Expo</h3>
+                    <p class="event-location">📍 Los Angeles</p>
+                    <p>Meet fellow travelers, discover new destinations, and get exclusive tour discounts.</p>
+                </div>
+
+                <div class="event-card">
+                    <div class="event-date">JAN 20, 2026</div>
+                    <h3 class="event-title">Winter Sports Festival</h3>
+                    <p class="event-location">📍 Colorado</p>
+                    <p>Join us for an exciting weekend of skiing, snowboarding, and mountain adventures.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Section -->
+    <section class="trust-section">
+        <h2 class="section-title">Trusted by Thousands of Travelers</h2>
+        <div class="trust-stats">
+            <div class="stat">
+                <div class="stat-number">15,000+</div>
+                <div class="stat-label">Happy Travelers</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">500+</div>
+                <div class="stat-label">Tour Destinations</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">98%</div>
+                <div class="stat-label">Satisfaction Rate</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">25+</div>
+                <div class="stat-label">Years Experience</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <h2 class="section-title">What Our Travelers Say</h2>
+        <p class="section-subtitle">Real experiences from real adventurers</p>
+        <div class="testimonials-container">
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"The Swiss Alps tour was absolutely breathtaking! Every detail was perfectly planned, and our guide was incredibly knowledgeable. Best vacation ever!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SM</div>
+                        <div class="author-info">
+                            <h4>Sarah Mitchell</h4>
+                            <p>Swiss Alps Explorer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Gradiel Adventures made our African safari dream come true. Seeing lions in the wild was a once-in-a-lifetime experience. Highly recommend!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">JR</div>
+                        <div class="author-info">
+                            <h4>James Rodriguez</h4>
+                            <p>African Safari Adventure</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Professional, friendly, and incredibly organized. The Japan tour exceeded all expectations. Can't wait to book our next adventure!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">EC</div>
+                        <div class="author-info">
+                            <h4>Emma Chen</h4>
+                            <p>Japan Cultural Experience</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="newsletter-container">
+            <h2>Get Exclusive Travel Deals</h2>
+            <p>Subscribe to our newsletter and receive special offers, travel tips, and destination guides</p>
+            <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thanks for subscribing!');">
+                <input type="email" class="newsletter-input" placeholder="Enter your email" required>
+                <button type="submit" class="newsletter-button">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>About Gradiel Adventures</h3>
+                <p>We're passionate about creating unforgettable travel experiences that connect people with the world's most amazing destinations.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#tours">Browse Tours</a></li>
+                    <li><a href="#events">Upcoming Events</a></li>
+                    <li><a href="#destinations">Destinations</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Booking Guide</a></li>
+                    <li><a href="#">Cancellation Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li>📧 info@Gradiel Adventures.com</li>
+                    <li>📞 +1 (555) 123-4567</li>
+                    <li>📍 123 Travel Street, NY 10001</li>
+                    <li>🕒 Mon-Fri: 9AM - 6PM</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Gradiel Adventures Tours. All rights reserved. | Designed with ❤️ for travelers</p>
+        </div>
+    </footer>
+    <script src="menu.js"></script>
+</body>
+</html>

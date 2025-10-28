@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tour Detail - Mt. Adventure Expedition</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--<link rel="stylesheet" href="styles.css">-->
+  <style>
+    body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f7f9fb;
+  margin: 0;
+  padding: 0;
+  color: #222;
+}
+
+main {
+  background: #fff;
+  max-width: 950px;
+  margin: 32px auto;
+  padding: 28px 32px 40px 32px;
+  border-radius: 14px;
+  box-shadow: 0 0 24px rgba(0,0,0,0.08);
+}
+
+h1 {
+  font-size: 2.3em;
+  margin-bottom: 6px;
+  color: #3b6cb7;
+}
+
+h2 {
+  font-size: 1.2em;
+  color: #31708e;
+  border-bottom: 1px solid #e5eaf1;
+  padding-bottom: 2px;
+  margin-top: 36px;
+}
+
+.gallery {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.gallery img {
+  border-radius: 10px;
+  max-height: 140px;
+  width: 200px;
+  box-shadow: 0 2px 10px rgba(59,108,183,0.13);
+  object-fit: cover;
+  transition: transform 0.2s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+.title-tagline .tagline {
+  font-size: 1.1em;
+  color: #505e6c;
+  margin-bottom: 0;
+}
+
+.price {
+  background: linear-gradient(90deg, #e5eaf1 0%, #f7f9fb 100%);
+  padding: 16px 18px;
+  border-radius: 10px;
+  box-shadow: 0 1px 4px rgba(59,108,183,0.03);
+  margin: 16px 0;
+  font-size: 1.05em;
+}
+
+.price-per-person {
+  color: #2b4d87;
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+.group-rate {
+  color: #7fa7d6;
+}
+
+.booking {
+  background: #f4f8ff;
+  padding: 22px;
+  border-radius: 10px;
+  margin-bottom: 14px;
+  box-shadow: 0 1px 6px rgba(49,112,142,0.04);
+}
+
+.booking form {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+.booking label {
+  font-size: 0.97em;
+  margin-right: 6px;
+}
+
+.booking input, .booking button {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #e0e6ef;
+  font-size: 1em;
+  margin-right: 14px;
+}
+
+.booking button {
+  background-color: #31708e;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.booking button:hover {
+  background: #5da9e9;
+}
+
+ul {
+  margin-left: 27px;
+}
+
+.includes h2 {
+  margin-top: 0;
+}
+
+.stars {
+  color: #f4b400;
+  font-size: 1.2em;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.review {
+  margin: 8px 0;
+  font-style: italic;
+}
+
+.related-tours ul {
+  display: flex;
+  gap: 18px;
+  list-style: disc;
+}
+
+.share {
+  margin-top: 40px;
+}
+
+.share button {
+  background: #e5eaf1;
+  border: none;
+  border-radius: 8px;
+  color: #384c6c;
+  padding: 8px 20px;
+  margin-right: 14px;
+  font-size: 1.05em;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.share button:hover {
+  background: #bcd7fb;
+}
+
+@media (max-width: 700px) {
+  main { padding: 12px; }
+  .gallery { flex-direction: column; align-items: center; }
+  .gallery img { width: 90%; max-width: 310px; max-height: 120px; }
+  .booking form { flex-direction: column; gap: 10px; }
+  .related-tours ul { flex-direction: column; }
+}
+
+  </style>
+</head>
+<body>
+  <main>
+    <section class="gallery">
+      <img src="tour1.jpg" alt="Tour Photo 1">
+      <img src="tour2.jpg" alt="Tour Photo 2">
+      <img src="tour3.jpg" alt="Tour Photo 3">
+    </section>
+
+    <section class="title-tagline">
+      <h1>Mt. Adventure Expedition</h1>
+      <p class="tagline">"Experience the thrill of a lifetime!"</p>
+    </section>
+
+    <section class="price">
+      <span class="price-per-person">$200 per person</span>
+      <span class="group-rate">Group Rate: $180 per person (5+)</span>
+    </section>
+
+    <section class="booking">
+      <h2>Book Your Tour</h2>
+      <form>
+        <label for="date">Choose date:</label>
+        <input type="date" id="date" name="date" required>
+        <label for="travelers">Number of travelers:</label>
+        <input type="number" id="travelers" name="travelers" min="1" required>
+        <button type="submit">Check Availability</button>
+      </form>
+    </section>
+
+    <section class="itinerary">
+      <h2>Itinerary</h2>
+      <ul>
+        <li><strong>Day 1:</strong> Arrival, welcome briefing, local sightseeing</li>
+        <li><strong>Day 2:</strong> Hiking, lunch, scenic views, camp overnight</li>
+        <li><strong>Day 3:</strong> Summit trek, picnic, return journey</li>
+      </ul>
+    </section>
+
+    <section class="includes">
+      <h2>What's Included</h2>
+      <ul>
+        <li>Guided tours</li>
+        <li>Accommodations</li>
+        <li>Meals during the tour</li>
+        <li>Transport from meeting point</li>
+      </ul>
+      <h2>What's Not Included</h2>
+      <ul>
+        <li>International airfare</li>
+        <li>Personal expenses</li>
+        <li>Travel insurance</li>
+      </ul>
+    </section>
+
+    <section class="logistics">
+      <h2>Meeting Point & Logistics</h2>
+      <p>Main Gate, City Central Park, 8:00 am. Transport and guides provided from there.</p>
+    </section>
+
+    <section class="packing">
+      <h2>What to Bring</h2>
+      <ul>
+        <li>Sturdy hiking boots</li>
+        <li>Water bottle</li>
+        <li>Weather-appropriate clothing</li>
+        <li>Sunscreen & hat</li>
+        <li>Personal medications</li>
+      </ul>
+    </section>
+
+    <section class="cancellation">
+      <h2>Cancellation Policy</h2>
+      <p>Free cancellation up to 7 days before start. 50% refund within 7 days. No refund for no-shows.</p>
+    </section>
+
+    <section class="reviews">
+      <h2>Customer Reviews</h2>
+      <div>
+        <span class="stars">★★★★☆</span>
+        <p class="review">"Amazing experience, great guide!" – Jane D.</p>
+        <p class="review">"Breathtaking views. Would do it again." – Samuel K.</p>
+      </div>
+    </section>
+
+    <section class="related-tours">
+      <h2>Related Tours</h2>
+      <ul>
+        <li>Coastal Safari Adventure</li>
+        <li>Historical City Walk</li>
+        <li>River Rafting Experience</li>
+      </ul>
+    </section>
+
+    <section class="share">
+      <h2>Share this Tour</h2>
+      <button>Facebook</button>
+      <button>Twitter/X</button>
+      <button>WhatsApp</button>
+      <button>Email</button>
+    </section>
+  </main>
+</body>
+</html>

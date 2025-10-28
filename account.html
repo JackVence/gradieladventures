@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account - WanderQuest</title>
+    <link rel="stylesheet" href="account.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo">🌍 Gradiel Adventures</a>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" onclick="closeMenu()">Home</a></li>
+                <li><a href="tours.html" onclick="closeMenu()">Tours</a></li>
+                <li><a href="#events" onclick="closeMenu()">Events</a></li>
+                <li><a href="#destinations" onclick="closeMenu()">Destinations</a></li>
+                <li><a href="#about" onclick="closeMenu()">About</a></li>
+                <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
+                <li class="active"><a href="#account" onclick="closeMenu()">Account</a></li>
+                <!--<li class="user-menu">
+                    <div class="user-avatar">JD</div>
+                    <span>John Doe</span>
+                </li>-->
+            </ul>
+        </div>
+    </nav>
+    <!--<nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">🌍 WanderQuest</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tours.html">Tours</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#destinations">Destinations</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li class="user-menu">
+                    <div class="user-avatar">JD</div>
+                    <span>John Doe</span>
+                </li>
+            </ul>
+        </div>
+    </nav>-->
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="header-content">
+            <div class="welcome-text">
+                <h1>Welcome back, John! 👋</h1>
+                <p>Manage your bookings, wishlist, and account settings</p>
+            </div>
+            <button class="logout-btn" onclick="handleLogout()">Logout</button>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <ul class="sidebar-menu">
+                <li><a href="#dashboard" class="menu-link active" onclick="showSection('dashboard')">
+                    <span class="menu-icon">📊</span>
+                    <span>Dashboard</span>
+                </a></li>
+                <li><a href="#profile" class="menu-link" onclick="showSection('profile')">
+                    <span class="menu-icon">👤</span>
+                    <span>My Profile</span>
+                </a></li>
+                <li><a href="#bookings" class="menu-link" onclick="showSection('bookings')">
+                    <span class="menu-icon">📅</span>
+                    <span>My Bookings</span>
+                </a></li>
+                <li><a href="#wishlist" class="menu-link" onclick="showSection('wishlist')">
+                    <span class="menu-icon">♥</span>
+                    <span>Wishlist</span>
+                </a></li>
+                <li><a href="#reviews" class="menu-link" onclick="showSection('reviews')">
+                    <span class="menu-icon">⭐</span>
+                    <span>My Reviews</span>
+                </a></li>
+                <li><a href="#payment" class="menu-link" onclick="showSection('payment')">
+                    <span class="menu-icon">💳</span>
+                    <span>Payment Methods</span>
+                </a></li>
+                <li><a href="#settings" class="menu-link" onclick="showSection('settings')">
+                    <span class="menu-icon">⚙️</span>
+                    <span>Settings</span>
+                </a></li>
+            </ul>
+        </aside>
+
+        <!-- Content Area -->
+        <div class="content-area">
+            <!-- Dashboard Section -->
+            <div id="dashboard" class="section active">
+                <h2 class="section-title">Dashboard Overview</h2>
+                
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">✈️</div>
+                        <div class="stat-value">5</div>
+                        <div class="stat-label">Total Trips</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">📅</div>
+                        <div class="stat-value">2</div>
+                        <div class="stat-label">Upcoming Bookings</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">♥</div>
+                        <div class="stat-value">8</div>
+                        <div class="stat-label">Saved Tours</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">⭐</div>
+                        <div class="stat-value">3</div>
+                        <div class="stat-label">Reviews Written</div>
+                    </div>
+                </div>
+
+                <h3 style="margin-top: 2rem; margin-bottom: 1rem;">Quick Actions</h3>
+                <div class="quick-actions">
+                    <div class="action-card" onclick="showSection('bookings')">
+                        <div class="action-icon">🔍</div>
+                        <h4>Browse Tours</h4>
+                        <p style="color: #666; font-size: 0.9rem;">Discover new adventures</p>
+                    </div>
+                    <div class="action-card" onclick="showSection('bookings')">
+                        <div class="action-icon">📋</div>
+                        <h4>View Bookings</h4>
+                        <p style="color: #666; font-size: 0.9rem;">Check your trips</p>
+                    </div>
+                    <div class="action-card" onclick="showSection('wishlist')">
+                        <div class="action-icon">💖</div>
+                        <h4>My Wishlist</h4>
+                        <p style="color: #666; font-size: 0.9rem;">Saved destinations</p>
+                    </div>
+                    <div class="action-card" onclick="alert('Opening support...')">
+                        <div class="action-icon">💬</div>
+                        <h4>Get Help</h4>
+                        <p style="color: #666; font-size: 0.9rem;">Contact support</p>
+                    </div>
+                </div>
+
+                <h3 style="margin-top: 2rem; margin-bottom: 1rem;">Upcoming Trips</h3>
+                <div class="booking-card">
+                    <div class="booking-image">🏔️</div>
+                    <div class="booking-info">
+                        <h3>Swiss Alps Explorer</h3>
+                        <div class="booking-details">
+                            <div class="booking-detail-item">📅 <strong>Departure:</strong> December 15, 2025</div>
+                            <div class="booking-detail-item">👥 <strong>Travelers:</strong> 2 Adults</div>
+                            <div class="booking-detail-item">🎫 <strong>Booking ID:</strong> WQ-2025-001234</div>
+                        </div>
+                        <span class="booking-status status-confirmed">Confirmed</span>
+                    </div>
+                    <div class="booking-actions">
+                        <button class="btn-small btn-view" onclick="alert('Viewing booking details...')">View Details</button>
+                        <button class="btn-small btn-cancel" onclick="confirmCancel()">Cancel</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Profile Section -->
+            <div id="profile" class="section">
+                <h2 class="section-title">My Profile</h2>
+                
+                <div class="profile-avatar-section">
+                    <div class="large-avatar">JD</div>
+                    <div>
+                        <h3>Profile Picture</h3>
+                        <p style="color: #666; margin: 0.5rem 0;">JPG, PNG or GIF. Max size 2MB</p>
+                        <div class="avatar-actions">
+                            <button class="btn-secondary" onclick="alert('Upload new photo...')">Upload New</button>
+                            <button class="btn-secondary" onclick="alert('Photo removed!')">Remove</button>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="profile-form" onsubmit="handleProfileUpdate(event)">
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" value="John Doe" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" value="john.doe@email.com" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Phone Number</label>
+                        <input type="tel" value="+1 (555) 123-4567">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Date of Birth</label>
+                        <input type="date" value="1990-05-15">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Country</label>
+                        <select>
+                            <option>United States</option>
+                            <option>Canada</option>
+                            <option>United Kingdom</option>
+                            <option>Australia</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Address</label>
+                        <textarea rows="3" placeholder="Enter your full address">123 Main Street, New York, NY 10001</textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Bio</label>
+                        <textarea rows="4" placeholder="Tell us about yourself...">Adventure seeker and travel enthusiast. Love exploring new cultures and trying local cuisines!</textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary">Save Changes</button>
+                </form>
+            </div>
+
+            <!-- Bookings Section -->
+            <div id="bookings" class="section">
+                <h2 class="section-title">My Bookings</h2>
+                
+                <div class="booking-filters">
+                    <button class="filter-btn active" onclick="filterBookings('all', this)">All Bookings</button>
+                    <button class="filter-btn" onclick="filterBookings('upcoming', this)">Upcoming</button>
+                    <button class="filter-btn" onclick="filterBookings('completed', this)">Completed</button>
+                    <button class="filter-btn" onclick="filterBookings('cancelled', this)">Cancelled</button>
+                </div>
+
+                <div class="booking-card">
+                    <div class="booking-image">🏔️</div>
+                    <div class="booking-info">
+                        <h3>Swiss Alps Explorer</h3>
+                        <div class="booking-details">
+                            <div class="booking-detail-item">📅 <strong>Departure:</strong> December 15, 2025</div>
+                            <div class="booking-detail-item">⏱️ <strong>Duration:</strong> 7 Days</div>
+                            <div class="booking-detail-item">👥 <strong>Travelers:</strong> 2 Adults</div>
+                            <div class="booking-detail-item">💰 <strong>Total Paid:</strong> $3,848</div>
+                            <div class="booking-detail-item">🎫 <strong>Booking ID:</strong> WQ-2025-001234</div>
+                        </div>
+                        <span class="booking-status status-confirmed">Confirmed</span>
+                    </div>
+                    <div class="booking-actions">
+                        <button class="btn-small btn-view" onclick="alert('Viewing booking details...')">View Details</button>
+                        <button class="btn-small btn-cancel" onclick="confirmCancel()">Cancel Booking</button>
+                    </div>
+                </div>
+
+                <div class="booking-card">
+                    <div class="booking-image">🏖️</div>
+                    <div class="booking-info">
+                        <h3>Bali Paradise Escape</h3>
+                        <div class="booking-details">
+                            <div class="booking-detail-item">📅 <strong>Departure:</strong> January 10, 2026</div>
+                            <div class="booking-detail-item">⏱️ <strong>Duration:</strong> 5 Days</div>
+                            <div class="booking-detail-item">👥 <strong>Travelers:</strong> 2 Adults</div>
+                            <div class="booking-detail-item">💰 <strong>Total Paid:</strong> $2,648</div>
+                            <div class="booking-detail-item">🎫 <strong>Booking ID:</strong> WQ-2025-001189</div>
+                        </div>
+                        <span class="booking-status status-pending">Payment Pending</span>
+                    </div>
+                    <div class="booking-actions">
+                        <button class="btn-small btn-view" onclick="alert('Viewing booking details...')">Complete Payment</button>
+                        <button class="btn-small btn-cancel" onclick="confirmCancel()">Cancel Booking</button>
+                    </div>
+                </div>
+
+                <div class="booking-card">
+                    <div class="booking-image">🦁</div>
+                    <div class="booking-info">
+                        <h3>African Safari Adventure</h3>
+                        <div class="booking-details">
+                            <div class="booking-detail-item">📅 <strong>Completed:</strong> August 20, 2025</div>
+                            <div class="booking-detail-item">⏱️ <strong>Duration:</strong> 10 Days</div>
+                            <div class="booking-detail-item">👥 <strong>Travelers:</strong> 2 Adults</div>
+                            <div class="booking-detail-item">💰 <strong>Total Paid:</strong> $7,048</div>
+                            <div class="booking-detail-item">🎫 <strong>Booking ID:</strong> WQ-2025-000892</div>
+                        </div>
+                        <span class="booking-status status-completed">Completed</span>
+                    </div>
+                    <div class="booking-actions">
+                        <button class="btn-small btn-view" onclick="alert('Viewing booking details...')">View Details</button>
+                        <button class="btn-small btn-view" onclick="showSection('reviews')">Write Review</button>
+                    </div>
+                </div>
+
+                <div class="booking-card">
+                    <div class="booking-image">🗼</div>
+                    <div class="booking-info">
+                        <h3>European Capitals Tour</h3>
+                        <div class="booking-details">
+                            <div class="booking-detail-item">📅 <strong>Was scheduled for:</strong> June 5, 2025</div>
+                            <div class="booking-detail-item">⏱️ <strong>Duration:</strong> 12 Days</div>
+                            <div class="booking-detail-item">👥 <strong>Travelers:</strong> 3 Adults</div>
+                            <div class="booking-detail-item">💰 <strong>Refund:</strong> $4,199 (processed)</div>
+                            <div class="booking-detail-item">🎫 <strong>Booking ID:</strong> WQ-2025-000543</div>
+                        </div>
+                        <span class="booking-status status-cancelled">Cancelled</span>
+                    </div>
+                    <div class="booking-actions">
+                        <button class="btn-small btn-view" onclick="alert('Viewing cancellation details...')">View Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Wishlist Section -->
+            <div id="wishlist" class="section">
+                <h2 class="section-title">My Wishlist</h2>
+                <p style="color: #666; margin-bottom: 2rem;">Save tours you're interested in and book them later</p>
+                
+                <div class="wishlist-grid">
+                    <div class="wishlist-card">
+                        <button class="remove-wishlist" onclick="removeFromWishlist(this)">×</button>
+                        <div class="wishlist-image">🏯</div>
+                        <div class="wishlist-content">
+                            <h3 class="wishlist-title">Japan Cultural Experience</h3>
+                            <div class="wishlist-price">$2,399</div>
+                            <div class="wishlist-meta">
+                                ⭐⭐⭐⭐⭐ (156) • 8 Days<br>
+                                Cultural • Max 14 people
+                            </div>
+                            <button class="btn-small btn-view" style="width: 100%;" onclick="alert('Opening tour details...')">View Tour</button>
+                        </div>
+                    </div>
+
+                    <div class="wishlist-card">
+                        <button class="remove-wishlist" onclick="removeFromWishlist(this)">×</button>
+                        <div class="wishlist-image">🏜️</div>
+                        <div class="wishlist-content">
+                            <h3 class="wishlist-title">Morocco Desert Adventure</h3>
+                            <div class="wishlist-price">$1,599</div>
+                            <div class="wishlist-meta">
+                                ⭐⭐⭐⭐⭐ (92) • 6 Days<br>
+                                Adventure • Max 10 people
+                            </div>
+                            <button class="btn-small btn-view" style="width: 100%;" onclick="alert('Opening tour details...')">View Tour</button>
+                        </div>
+                    </div>
+
+                    <div class="wishlist-card">
+                        <button class="remove-wishlist" onclick="removeFromWishlist(this)">×</button>
+                        <div class="wishlist-image">🌋</div>
+                        <div class="wishlist-content">
+                            <h3 class="wishlist-title">Iceland Northern Lights</h3>
+                            <div class="wishlist-price">$2,699</div>
+                            <div class="wishlist-meta">
+                                ⭐⭐⭐⭐⭐ (178) • 6 Days<br>
+                                Adventure • Max 12 people
+                            </div>
+                            <button class="btn-small btn-view" style="width: 100%;" onclick="alert('Opening tour details...')">View Tour</button>
+                        </div>
+                    </div>
+
+                    <div class="wishlist-card">
+                        <button class="remove-wishlist" onclick="removeFromWishlist(this)">×</button>
+                        <div class="wishlist-image">🗿</div>
+                        <div class="wishlist-content">
+                            <h3 class="wishlist-title">Ancient Greece Discovery</h3>
+                            <div class="wishlist-price">$2,199</div>
+                            <div class="wishlist-meta">
+                                ⭐⭐⭐⭐⭐ (134) • 9 Days<br>
+                                Cultural • Max 16 people
+                            </div>
+                            <button class="btn-small btn-view" style="width: 100%;" onclick="alert('Opening tour details...')">View Tour</button>
+                        </div>
+                    </div>
+
+                    <div class="wishlist-card">
+                        <button class="remove-wishlist" onclick="removeFromWishlist(this)">×</button>
+                        <div class="wishlist-image">🏞️</div>
+                        <div class="wishlist-content">
+                            <h3 class="wishlist-title">New Zealand Adventure</h3>
+                            <div class="wishlist-price">$3,899</div>
+                            <div class="wishlist-meta">
+                                ⭐⭐⭐⭐⭐ (203) • 14 Days<br>
+                                Adventure • Max 10 people
+                            </div>
+                            <button class="btn-small btn-view" style="width: 100%;" onclick="alert('Opening tour details...')">View Tour</button>
+                        </div>
+                    </div>
+
+                    <div class="wishlist-card">
+                        <button class="remove-wishlist" onclick="removeFromWishlist(this)">×</button>
+                        <div class="wishlist-image">🕌</div>
+                        <div class="wishlist-content">
+                            <h3 class="wishlist-title">Turkey & Cappadocia Magic</h3>
+                            <div class="wishlist-price">$1,799</div>
+                            <div class="wishlist-meta">
+                                ⭐⭐⭐⭐⭐ (167) • 7 Days<br>
+                                Cultural • Max 18 people
+                            </div>
+                            <button class="btn-small btn-view" style="width: 100%;" onclick="alert('Opening tour details...')">View Tour</button>
+                        </div>
+                    </div>
+
+                    <div class="wishlist-card">
+                        <button class="remove-wishlist" onclick="removeFromWishlist(this)">×</button>
+                        <div class="wishlist-image">🌴</div>
+                        <div class="wishlist-content">
+                            <h3 class="wishlist-title">Maldives Luxury Escape</h3>
+                            <div class="wishlist-price">$4,299</div>
+                            <div class="wishlist-meta">
+                                ⭐⭐⭐⭐⭐ (289) • 5 Days<br>
+                                Beach & Relaxation • Max 2 people
+                            </div>
+                            <button class="btn-small btn-view" style="width: 100%;" onclick="alert('Opening tour details...')">View Tour</button>
+                        </div>
+                    </div>
+
+                    <div class="wishlist-card">
+                        <button class="remove-wishlist" onclick="removeFromWishlist(this)">×</button>
+                        <div class="wishlist-image">🏛️</div>
+                        <div class="wishlist-content">
+                            <h3 class="wishlist-title">Peru & Machu Picchu Trek</h3>
+                            <div class="wishlist-price">$2,899</div>
+                            <div class="wishlist-meta">
+                                ⭐⭐⭐⭐⭐ (245) • 10 Days<br>
+                                Cultural • Max 12 people
+                            </div>
+                            <button class="btn-small btn-view" style="width: 100%;" onclick="alert('Opening tour details...')">View Tour</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reviews Section -->
+            <div id="reviews" class="section">
+                <h2 class="section-title">My Reviews</h2>
+                
+                <div class="review-card">
+                    <div class="review-header">
+                        <div>
+                            <h3 class="review-tour-name">African Safari Adventure</h3>
+                            <div class="review-date">Reviewed on September 5, 2025</div>
+                        </div>
+                        <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                    </div>
+                    <p class="review-text">Absolutely incredible experience! The safari exceeded all our expectations. Our guide was knowledgeable and made sure we saw the Big Five. The accommodations were luxurious and the food was amazing. Definitely a once-in-a-lifetime trip. Highly recommend WanderQuest for anyone looking to explore Africa!</p>
+                    <div class="review-actions">
+                        <button class="btn-secondary" onclick="alert('Editing review...')">Edit Review</button>
+                        <button class="btn-secondary" onclick="confirmDelete('review')">Delete Review</button>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <div>
+                            <h3 class="review-tour-name">Iceland Northern Lights</h3>
+                            <div class="review-date">Reviewed on March 18, 2025</div>
+                        </div>
+                        <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                    </div>
+                    <p class="review-text">Iceland in winter is magical! We were lucky to see the Northern Lights on three different nights. The ice caves were breathtaking, and the Blue Lagoon was so relaxing. Our tour guide was fantastic and shared so many interesting facts about Iceland's geology and culture. Worth every penny!</p>
+                    <div class="review-actions">
+                        <button class="btn-secondary" onclick="alert('Editing review...')">Edit Review</button>
+                        <button class="btn-secondary" onclick="confirmDelete('review')">Delete Review</button>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <div>
+                            <h3 class="review-tour-name">Japan Cultural Experience</h3>
+                            <div class="review-date">Reviewed on November 22, 2024</div>
+                        </div>
+                        <div class="review-rating">⭐⭐⭐⭐⭐</div>
+                    </div>
+                    <p class="review-text">Japan has been on my bucket list forever, and this tour was perfect! From the bustling streets of Tokyo to the peaceful temples of Kyoto, every moment was special. The cherry blossoms were in full bloom, and we got to experience a traditional tea ceremony. The food tour in Osaka was a highlight. Can't wait to go back!</p>
+                    <div class="review-actions">
+                        <button class="btn-secondary" onclick="alert('Editing review...')">Edit Review</button>
+                        <button class="btn-secondary" onclick="confirmDelete('review')">Delete Review</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Payment Methods Section -->
+            <div id="payment" class="section">
+                <h2 class="section-title">Payment Methods</h2>
+                <p style="color: #666; margin-bottom: 2rem;">Manage your saved payment methods for faster checkout</p>
+                
+                <div class="review-card" style="display: flex; justify-content: space-between; align-items: center;">
+                    <div>
+                        <h3 style="margin-bottom: 0.5rem;">💳 Visa ending in 4242</h3>
+                        <p style="color: #666;">Expires 12/2026 • Default payment method</p>
+                    </div>
+                    <div style="display: flex; gap: 0.5rem;">
+                        <button class="btn-secondary" onclick="alert('Editing card...')">Edit</button>
+                        <button class="btn-secondary" onclick="confirmDelete('card')">Remove</button>
+                    </div>
+                </div>
+
+                <div class="review-card" style="display: flex; justify-content: space-between; align-items: center;">
+                    <div>
+                        <h3 style="margin-bottom: 0.5rem;">💳 Mastercard ending in 8888</h3>
+                        <p style="color: #666;">Expires 08/2027</p>
+                    </div>
+                    <div style="display: flex; gap: 0.5rem;">
+                        <button class="btn-secondary" onclick="alert('Editing card...')">Edit</button>
+                        <button class="btn-secondary" onclick="confirmDelete('card')">Remove</button>
+                    </div>
+                </div>
+
+                <button class="btn-primary" onclick="alert('Adding new payment method...')">+ Add New Payment Method</button>
+            </div>
+
+            <!-- Settings Section -->
+            <div id="settings" class="section">
+                <h2 class="section-title">Account Settings</h2>
+                
+                <div class="settings-section">
+                    <h3>Notifications</h3>
+                    <div class="settings-item">
+                        <div>
+                            <strong>Email Notifications</strong>
+                            <p style="color: #666; font-size: 0.9rem;">Receive booking confirmations and updates via email</p>
+                        </div>
+                        <div class="toggle-switch active" onclick="toggleSetting(this)"></div>
+                    </div>
+                    <div class="settings-item">
+                        <div>
+                            <strong>SMS Notifications</strong>
+                            <p style="color: #666; font-size: 0.9rem;">Get text messages for important updates</p>
+                        </div>
+                        <div class="toggle-switch active" onclick="toggleSetting(this)"></div>
+                    </div>
+                    <div class="settings-item">
+                        <div>
+                            <strong>Marketing Emails</strong>
+                            <p style="color: #666; font-size: 0.9rem;">Receive special offers and travel inspiration</p>
+                        </div>
+                        <div class="toggle-switch" onclick="toggleSetting(this)"></div>
+                    </div>
+                    <div class="settings-item">
+                        <div>
+                            <strong>Newsletter</strong>
+                            <p style="color: #666; font-size: 0.9rem;">Weekly travel tips and destination guides</p>
+                        </div>
+                        <div class="toggle-switch active" onclick="toggleSetting(this)"></div>
+                    </div>
+                </div>
+
+                <div class="settings-section">
+                    <h3>Privacy</h3>
+                    <div class="settings-item">
+                        <div>
+                            <strong>Profile Visibility</strong>
+                            <p style="color: #666; font-size: 0.9rem;">Make your profile visible to other travelers</p>
+                        </div>
+                        <div class="toggle-switch" onclick="toggleSetting(this)"></div>
+                    </div>
+                    <div class="settings-item">
+                        <div>
+                            <strong>Show My Reviews</strong>
+                            <p style="color: #666; font-size: 0.9rem;">Display your reviews publicly on tour pages</p>
+                        </div>
+                        <div class="toggle-switch active" onclick="toggleSetting(this)"></div>
+                    </div>
+                </div>
+
+                <div class="settings-section">
+                    <h3>Security</h3>
+                    <button class="btn-secondary" onclick="alert('Change password form...')">Change Password</button>
+                    <button class="btn-secondary" style="margin-left: 1rem;" onclick="alert('Setting up 2FA...')">Enable Two-Factor Authentication</button>
+                </div>
+
+                <div class="danger-zone">
+                    <h3>Danger Zone</h3>
+                    <p style="color: #666; margin-bottom: 1rem;">Once you delete your account, there is no going back. Please be certain.</p>
+                    <button class="btn-danger" onclick="confirmDelete('account')">Delete My Account</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Show selected section
+        function showSection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('.section').forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Remove active class from all menu links
+            document.querySelectorAll('.menu-link').forEach(link => {
+                link.classList.remove('active');
+            });
+            
+            // Show selected section
+            document.getElementById(sectionId).classList.add('active');
+            
+            // Add active class to clicked menu link
+            event.target.closest('.menu-link').classList.add('active');
+            
+            // Update URL hash
+            window.location.hash = sectionId;
+            
+            // Scroll to top of content
+            document.querySelector('.content-area').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Filter bookings
+        function filterBookings(type, button) {
+            // Update active button
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            button.classList.add('active');
+            
+            alert(`Filtering bookings by: ${type}`);
+            // In a real app, this would filter the booking cards
+        }
+
+        // Remove from wishlist
+        function removeFromWishlist(button) {
+            if (confirm('Remove this tour from your wishlist?')) {
+                button.closest('.wishlist-card').style.animation = 'fadeOut 0.3s ease-out';
+                setTimeout(() => {
+                    button.closest('.wishlist-card').remove();
+                }, 300);
+            }
+        }
+
+        // Toggle settings
+        function toggleSetting(toggle) {
+            toggle.classList.toggle('active');
+        }
+
+        // Handle profile update
+        function handleProfileUpdate(event) {
+            event.preventDefault();
+            alert('Profile updated successfully!');
+        }
+
+        // Handle logout
+        function handleLogout() {
+            if (confirm('Are you sure you want to logout?')) {
+                alert('Logging out...\nRedirecting to homepage...');
+                // In a real app: window.location.href = 'index.html';
+            }
+        }
+
+        // Confirm cancellation
+        function confirmCancel() {
+            if (confirm('Are you sure you want to cancel this booking?\n\nCancellation policy applies based on departure date.')) {
+                alert('Booking cancellation initiated.\nOur team will process your refund within 5-7 business days.');
+            }
+        }
+
+        // Confirm delete
+        function confirmDelete(type) {
+            let message = '';
+            if (type === 'account') {
+                message = 'Are you absolutely sure you want to delete your account?\n\nThis action cannot be undone. All your bookings, reviews, and data will be permanently deleted.';
+            } else if (type === 'review') {
+                message = 'Delete this review? This action cannot be undone.';
+            } else if (type === 'card') {
+                message = 'Remove this payment method?';
+            }
+            
+            if (confirm(message)) {
+                alert(`${type.charAt(0).toUpperCase() + type.slice(1)} deleted successfully!`);
+            }
+        }
+
+        // Load section from URL hash on page load
+        window.addEventListener('DOMContentLoaded', () => {
+            const hash = window.location.hash.slice(1);
+            if (hash) {
+                const section = document.getElementById(hash);
+                if (section) {
+                    document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+                    section.classList.add('active');
+                    
+                    document.querySelectorAll('.menu-link').forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === `#${hash}`) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            }
+        });
+
+        // Add CSS for fadeOut animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fadeOut {
+                from { opacity: 1; transform: scale(1); }
+                to { opacity: 0; transform: scale(0.8); }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+    <script src="menu.js"></script>
+</body>
+</html>
