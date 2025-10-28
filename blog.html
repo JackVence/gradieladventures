@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Blog - Gradiel Adventures</title>
+    <link rel="stylesheet" href="blog.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">🌍 Gradiel Adventures</a>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li class="active"><a href="index.html" onclick="closeMenu()">Home</a></li>
+                <li><a href="tours.html" onclick="closeMenu()">Tours</a></li>
+                <li><a href="events.html" onclick="closeMenu()">Events</a></li>
+                <li><a href="blog.html" onclick="closeMenu()">Blogs</a></li>
+                <li><a href="about.html" onclick="closeMenu()">About</a></li>
+                <li><a href="contact.html" onclick="closeMenu()">Contact</a></li>
+                <li><a href="account.html" onclick="closeMenu()">Account</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Travel Stories & Tips</h1>
+            <p>Discover travel inspiration, destination guides, and expert advice from our adventures around the world</p>
+        </div>
+    </section>
+
+    <!-- Search Section -->
+    <section class="search-section">
+        <div class="search-bar">
+            <input type="text" class="search-input" placeholder="Search articles...">
+            <button class="search-btn">Search</button>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Blog Posts Area -->
+        <div class="blog-posts">
+            <!-- Category Filters -->
+            <div class="category-filters">
+                <button class="category-btn active" onclick="filterCategory('all', this)">All Posts</button>
+                <button class="category-btn" onclick="filterCategory('guides', this)">Travel Guides</button>
+                <button class="category-btn" onclick="filterCategory('tips', this)">Tips & Tricks</button>
+                <button class="category-btn" onclick="filterCategory('culture', this)">Culture</button>
+                <button class="category-btn" onclick="filterCategory('adventure', this)">Adventure</button>
+                <button class="category-btn" onclick="filterCategory('food', this)">Food & Dining</button>
+            </div>
+
+            <!-- Featured Post -->
+            <article class="featured-post" onclick="openPost('featured')">
+                <div class="featured-image">
+                    🏔️
+                    <span class="featured-badge">Featured</span>
+                </div>
+                <div class="featured-content">
+                    <span class="post-category">Travel Guides</span>
+                    <h2 class="post-title">The Ultimate Guide to Exploring the Swiss Alps: Hidden Gems and Must-See Locations</h2>
+                    <div class="post-meta">
+                        <span class="meta-item">📅 October 25, 2025</span>
+                        <span class="meta-item">👤 By Sarah Mitchell</span>
+                        <span class="meta-item">⏱️ 8 min read</span>
+                        <span class="meta-item">💬 24 comments</span>
+                    </div>
+                    <p class="post-excerpt">Discover the breathtaking beauty of the Swiss Alps beyond the tourist trails. From charming mountain villages to pristine hiking routes, we share our insider knowledge of Switzerland's most spectacular alpine destinations. Learn about the best times to visit, essential packing tips, and local secrets that will make your Swiss adventure truly unforgettable.</p>
+                    <a href="#" class="read-more">Read Full Article →</a>
+                </div>
+            </article>
+
+            <!-- Blog Post Cards -->
+            <article class="blog-card" onclick="openPost(1)">
+                <div class="blog-image">🦁</div>
+                <div class="blog-content">
+                    <span class="post-category">Adventure</span>
+                    <h3 class="blog-title">Safari Photography: 10 Tips for Capturing the Perfect Wildlife Shot</h3>
+                    <div class="post-meta">
+                        <span class="meta-item">📅 October 20, 2025</span>
+                        <span class="meta-item">👤 By David Patel</span>
+                        <span class="meta-item">⏱️ 6 min read</span>
+                    </div>
+                    <p class="post-excerpt">Master the art of wildlife photography with these essential tips from professional safari guides. Learn about camera settings, positioning techniques, and the best times of day to capture stunning animal portraits in their natural habitat.</p>
+                    <a href="#" class="read-more">Read More →</a>
+                </div>
+            </article>
+
+            <article class="blog-card" onclick="openPost(2)">
+                <div class="blog-image">🍜</div>
+                <div class="blog-content">
+                    <span class="post-category">Food & Dining</span>
+                    <h3 class="blog-title">A Culinary Journey Through Japan: Street Food You Must Try</h3>
+                    <div class="post-meta">
+                        <span class="meta-item">📅 October 18, 2025</span>
+                        <span class="meta-item">👤 By Emma Rodriguez</span>
+                        <span class="meta-item">⏱️ 5 min read</span>
+                    </div>
+                    <p class="post-excerpt">Explore the vibrant world of Japanese street food, from takoyaki to yakitori. Discover the best food markets in Tokyo, Osaka, and Kyoto, and learn the etiquette of eating like a local in Japan's bustling food scenes.</p>
+                    <a href="#" class="read-more">Read More →</a>
+                </div>
+            </article>
+
+            <article class="blog-card" onclick="openPost(3)">
+                <div class="blog-image">🎒</div>
+                <div class="blog-content">
+                    <span class="post-category">Tips & Tricks</span>
+                    <h3 class="blog-title">How to Pack Light for a 2-Week International Trip</h3>
+                    <div class="post-meta">
+                        <span class="meta-item">📅 October 15, 2025</span>
+                        <span class="meta-item">👤 By Sarah Mitchell</span>
+                        <span class="meta-item">⏱️ 7 min read</span>
+                    </div>
+                    <p class="post-excerpt">Travel smart with our expert packing guide. Learn which items are essential, what you can skip, and clever packing techniques that will help you fit everything into a carry-on bag while staying comfortable throughout your journey.</p>
+                    <a href="#" class="read-more">Read More →</a>
+                </div>
+            </article>
+
+            <article class="blog-card" onclick="openPost(4)">
+                <div class="blog-image">🏖️</div>
+                <div class="blog-content">
+                    <span class="post-category">Travel Guides</span>
+                    <h3 class="blog-title">Bali's Hidden Beaches: Beyond the Tourist Crowds</h3>
+                    <div class="post-meta">
+                        <span class="meta-item">📅 October 12, 2025</span>
+                        <span class="meta-item">👤 By Michael Chen</span>
+                        <span class="meta-item">⏱️ 6 min read</span>
+                    </div>
+                    <p class="post-excerpt">Escape the crowds and discover Bali's secret paradise beaches. We reveal lesser-known coastal gems where you can enjoy pristine sands, crystal-clear waters, and authentic Balinese culture away from the tourist hotspots.</p>
+                    <a href="#" class="read-more">Read More →</a>
+                </div>
+            </article>
+
+            <article class="blog-card" onclick="openPost(5)">
+                <div class="blog-image">🕌</div>
+                <div class="blog-content">
+                    <span class="post-category">Culture</span>
+                    <h3 class="blog-title">Understanding Local Customs: A Guide to Cultural Etiquette in Morocco</h3>
+                    <div class="post-meta">
+                        <span class="meta-item">📅 October 10, 2025</span>
+                        <span class="meta-item">👤 By David Patel</span>
+                        <span class="meta-item">⏱️ 5 min read</span>
+                    </div>
+                    <p class="post-excerpt">Navigate Moroccan culture with confidence. Learn about proper greetings, dress codes, dining etiquette, and negotiating in souks. This guide helps you show respect and connect authentically with locals during your Moroccan adventure.</p>
+                    <a href="#" class="read-more">Read More →</a>
+                </div>
+            </article>
+
+            <article class="blog-card" onclick="openPost(6)">
+                <div class="blog-image">✈️</div>
+                <div class="blog-content">
+                    <span class="post-category">Tips & Tricks</span>
+                    <h3 class="blog-title">Budget Travel Hacks: How to See the World Without Breaking the Bank</h3>
+                    <div class="post-meta">
+                        <span class="meta-item">📅 October 8, 2025</span>
+                        <span class="meta-item">👤 By Emma Rodriguez</span>
+                        <span class="meta-item">⏱️ 8 min read</span>
+                    </div>
+                    <p class="post-excerpt">Travel more for less with our proven money-saving strategies. From finding cheap flights to scoring free accommodation, discover how to stretch your travel budget and experience amazing adventures without compromising on quality.</p>
+                    <a href="#" class="read-more">Read More →</a>
+                </div>
+            </article>
+
+            <!-- Pagination -->
+            <div class="pagination">
+                <button class="page-btn" disabled>← Previous</button>
+                <button class="page-btn active">1</button>
+                <button class="page-btn">2</button>
+                <button class="page-btn">Next →</button>
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <!-- Search Widget -->
+            <!--<div class="sidebar-widget">
+                <h3 class="widget-title">Search Articles</h3>
+                <div class="search-bar" style="border-radius: 8px;">
+                    <input type="text" class="search-input" placeholder="Search...">
+                    <button class="search-btn" style="border-radius: 0 8px 8px 0;">🔍</button>
+                </div>
+            </div>-->
+
+            <!-- Popular Posts Widget -->
+            <div class="sidebar-widget">
+                <h3 class="widget-title">Popular Posts</h3>
+                <div class="popular-post" onclick="openPost('popular1')">
+                    <div class="popular-thumb">🏔️</div>
+                    <div class="popular-info">
+                        <h4>Top 10 Hiking Trails in the Swiss Alps</h4>
+                        <p class="popular-date">October 22, 2025</p>
+                    </div>
+                </div>
+                <div class="popular-post" onclick="openPost('popular2')">
+                    <div class="popular-thumb">🌍</div>
+                    <div class="popular-info">
+                        <h4>Solo Travel Safety: Essential Tips for Women</h4>
+                        <p class="popular-date">October 19, 2025</p>
+                    </div>
+                </div>
+                <div class="popular-post" onclick="openPost('popular3')">
+                    <div class="popular-thumb">📸</div>
+                    <div class="popular-info">
+                        <h4>Instagram-Worthy Destinations in 2025</h4>
+                        <p class="popular-date">October 16, 2025</p>
+                    </div>
+                </div>
+                <div class="popular-post" onclick="openPost('popular4')">
+                    <div class="popular-thumb">🎫</div>
+                    <div class="popular-info">
+                        <h4>How to Score Last-Minute Flight Deals</h4>
+                        <p class="popular-date">October 14, 2025</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Categories Widget -->
+            <div class="sidebar-widget">
+                <h3 class="widget-title">Categories</h3>
+                <ul class="category-list">
+                    <li class="category-item">
+                        <span>Travel Guides</span>
+                        <span class="category-count">24</span>
+                    </li>
+                    <li class="category-item">
+                        <span>Tips & Tricks</span>
+                        <span class="category-count">18</span>
+                    </li>
+                    <li class="category-item">
+                        <span>Culture</span>
+                        <span class="category-count">15</span>
+                    </li>
+                    <li class="category-item">
+                        <span>Adventure</span>
+                        <span class="category-count">21</span>
+                    </li>
+                    <li class="category-item">
+                        <span>Food & Dining</span>
+                        <span class="category-count">12</span>
+                    </li>
+                    <li class="category-item">
+                        <span>Photography</span>
+                        <span class="category-count">9</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Tags Widget -->
+            <div class="sidebar-widget">
+                <h3 class="widget-title">Popular Tags</h3>
+                <div class="tags-cloud">
+                    <a href="#" class="tag">Travel Tips</a>
+                    <a href="#" class="tag">Budget Travel</a>
+                    <a href="#" class="tag">Solo Travel</a>
+                    <a href="#" class="tag">Europe</a>
+                    <a href="#" class="tag">Asia</a>
+                    <a href="#" class="tag">Adventure</a>
+                    <a href="#" class="tag">Photography</a>
+                    <a href="#" class="tag">Food</a>
+                    <a href="#" class="tag">Culture</a>
+                    <a href="#" class="tag">Hiking</a>
+                    <a href="#" class="tag">Beach</a>
+                    <a href="#" class="tag">Wildlife</a>
+                </div>
+            </div>
+
+            <!-- Newsletter Widget -->
+            <div class="sidebar-widget">
+                <h3 class="widget-title">Newsletter</h3>
+                <p style="color: #666; margin-bottom: 1rem; font-size: 0.95rem;">Get the latest travel stories and tips delivered to your inbox!</p>
+                <form class="newsletter-form" onsubmit="handleNewsletter(event)">
+                    <input type="email" class="newsletter-input" placeholder="Your email address" required>
+                    <button type="submit" class="newsletter-btn">Subscribe</button>
+                </form>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>About Gradiel Adventures</h3>
+                <p>We're passionate about creating unforgettable travel experiences that connect people with the world's most amazing destinations.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#tours">Browse Tours</a></li>
+                    <li><a href="#events">Upcoming Events</a></li>
+                    <li><a href="#destinations">Destinations</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Booking Guide</a></li>
+                    <li><a href="#">Cancellation Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li>📧 info@Gradiel Adventures.com</li>
+                    <li>📞 +1 (555) 123-4567</li>
+                    <li>📍 123 Travel Street, NY 10001</li>
+                    <li>🕒 Mon-Fri: 9AM - 6PM</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Gradiel Adventures Tours. All rights reserved. | Designed with ❤️ for travelers</p>
+        </div>
+    </footer>
+
+    <script>
+        // Parallax Effect for Hero
+        window.addEventListener('scroll', function() {
+            const scrolled = window.pageYOffset;
+            const hero = document.querySelector('.hero');
+            const heroContent = document.querySelector('.hero-content');
+            
+            if (hero && heroContent) {
+                heroContent.style.transform = `translateY(${scrolled * 0.5}px)`;
+            }
+        });
+
+        // Filter categories
+        function filterCategory(category, button) {
+            // Update active button
+            document.querySelectorAll('.category-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            button.classList.add('active');
+            
+            alert(`Filtering by: ${category}`);
+            // In real implementation, this would filter the blog posts
+        }
+
+        // Open blog post
+        function openPost(postId) {
+            alert(`Opening blog post: ${postId}\nThis would navigate to the full article page.`);
+            // In real implementation: window.location.href = `blog-post.html?id=${postId}`;
+        }
+
+        // Handle newsletter subscription
+        function handleNewsletter(event) {
+            event.preventDefault();
+            const email = event.target.querySelector('input').value;
+            alert(`Thank you for subscribing!\nYou'll receive our latest travel stories`);
+        }
+    </script>
+    <script src="menu.js"></script>
+</body>
+</html>
